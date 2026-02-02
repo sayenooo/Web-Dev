@@ -10,6 +10,7 @@ body {
     align-items: center;
     color: #1c1e21;
     position: relative;
+    min-height: 100vh;
 }
 
 .container {
@@ -19,6 +20,9 @@ body {
     gap: 40px;
     flex: 1;
     width: 100%;
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 .logo {
     position: absolute;
@@ -29,6 +33,7 @@ body {
     flex: 1;
     padding-top: 20px;
     text-align: center;
+    min-width: 0;
 }
 .right {
     font-family: sans-serif;
@@ -38,6 +43,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 420px;     
+    max-width: 100%;
+    position: relative;
+    flex: 0 0 500px;
 }
 .right input{
     padding: 10px;
@@ -54,23 +63,24 @@ body {
     border: 1px solid lightgray;
     margin-bottom: 12px;
 }
-.login-part {
+.loginn {
     margin-bottom: 50px;
 }
-.login-part a {
+.forget {
     display: block;
     text-align: center;
     color: #1c1e21;
+    background-color: rgb(255, 255, 255)  ;
     text-decoration: none;
-    margin-top: 6px;
+    margin-top: 3px;
 }
-.login-part p {
+.voiti {
     margin-bottom: 10px;
 }
-.login-part a:hover {
-    text-decoration: underline;
+.forget:hover, .facebook:hover, .create:hover {
+    background-color: #dcdcdc;
 }
-.login {
+.signin {
     background-color: rgb(0, 136, 244)  ;
     color: white;
     text-align: center;
@@ -92,10 +102,10 @@ body {
     color: #1c1e21;
     font-size: 14px;
 }
-.other-part button {
+.create button {
     border-color: rgb(0, 136, 244);
 }
-.new-acc {
+.create {
     background-color: white;
     border-color: rgb(0, 136, 244);
     color: rgb(0, 136, 244);
@@ -111,7 +121,7 @@ body {
     color: #1c1e21;
     font-size: 14px;
 }
-.gradient{
+.rainbow{
     background: linear-gradient(to right, orange, red, purple);
     -webkit-background-clip: text;
     background-clip: text;
@@ -123,16 +133,24 @@ body {
     border-top: 1px solid lightgray;
     padding: 20px;
     color: gray;
-    text-decoration: None;
+    text-decoration: none;
     font-size: 12px;
     text-align: center;
 }
 .footer a{
     color: gray;
-    text-decoration: None;
-    margin: 8px;
+    text-decoration: none;
+    margin: 5px;
     font-size: 12px;
 }
-.footer-links {
+.upper, .lower {
     margin: 10px;
+}
+
+.visually-hidden{
+  position:absolute;
+  width:1px;height:1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
 }

@@ -1,84 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "ru">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
+    <title>Facebook - Выполните вход</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="left">
-            <h1>facebook</h1>
-            <p>
-                Facebook помогает вам всегда оставаться на связи
-                и общаться со своими знакомыми.
-            </p>
+    <main class = "container">
+        <div class = "left">
+            <h1 class = "facebook">facebook</h1>
+            <p class = "text">Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</p>
         </div>
 
-        <div class="right-wrap">
-            <div class="right">
-                <input type="text" placeholder="Электронный адрес или номер телефона">
-                <input type="password" placeholder="Пароль">
+        <div class = "right">
+            <form class = "right1">
+                <label for="id" class="visually-hidden">Электронный адрес или номер телефона</label>
+                <input id="id" class="field" type="text" placeholder="Электронный адрес или номер телефона" />
 
-                <button class="login">Вход</button>
+                <label for="pas" class="visually-hidden">Пароль</label>
+                <input id="pas" class="field" type="text" placeholder="Пароль"/>
 
-                <a href="#">Забыли пароль?</a>
-
+                <button class = "signin" type ="submit"><b>Вход</b></button>
+                <a href = "#" class = "forget">Забыли пароль?</a>
                 <hr>
-
-                <button class="signup">Создать новый аккаунт</button>
+                <button class = "signup" type ="button"><b>Создать новый аккаунт</b></button>
+            </form>
+            <div class = "undertext">
+                <b>Создать Страницу</b> знаменитости, музыкальной группы или компании.
             </div>
-            <p class="create-page"><strong>Создать Страницу</strong> знаменитости, музыкальной группы или компании.</p>
-        </div>
-    </div>
+        </div>    
+    </main>
 
-    <footer class="footer">
-        <div class="footer-languages">
-            <a href="#">Русский</a>
-            <a href="#">Қазақша</a>
-            <a href="#">English (US)</a>
-            <a href="#">Türkçe</a>
-            <a href="#">Bahasa Indonesia</a>
-            <a href="#">中文(简体)</a>
-            <a href="#">Deutsch</a>
-            <a href="#">한국어</a>
-            <a href="#">Shqip</a>
-            <a href="#">Español</a>
-            <a href="#">Português (Brasil)</a>
-            <span>+</span>
-        </div>
 
-        <div class="footer-links">
-            <a href="#">Зарегистрироваться</a>
-            <a href="#">Вход</a>
-            <a href="#">Messenger</a>
-            <a href="#">Facebook Lite</a>
-            <a href="#">Видео</a>
-            <a href="#">Meta Pay</a>
-            <a href="#">Магазин Meta</a>
-            <a href="#">Meta Quest</a>
-            <a href="#">Ray-Ban Meta</a>
-            <a href="#">Meta AI</a>
-            <a href="#">Instagram</a>
-            <a href="#">Threads</a>
-            <a href="#">Центр информации о выборах</a>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Центр конфиденциальности</a>
-            <a href="#">Информация</a>
-            <a href="#">Создать рекламу</a>
-            <a href="#">Создать Страницу</a>
-            <a href="#">Разработчикам</a>
-            <a href="#">Вакансии</a>
-            <a href="#">Файлы cookie</a>
-            <a href="#">Рекламные предпочтения</a>
-            <a href="#">Условия использования</a>
-            <a href="#">Справка</a>
-            <a href="#">Загрузка контактов и лиц, не являющихся пользователями</a>
-        </div>
-
-        <div class="footer-meta">Meta © 2026</div>
-    </footer>
+    <footer class = "footer">
+    <div class = "lang">
+        <a href="#">Русский</a>
+        <a href="#">Қазақша</a>
+        <a href="#">English (US)</a>
+        <a href="#">Türkçe</a>
+        <a href="#">Bahasa Indonesia</a>
+        <a href="#">]中文(简体)</a>
+        <a href="#">Deutsch</a>
+        <a href="#">한국어</a>
+        <a href="#">Shqip</a>
+        <a href="#">Español</a>
+        <a href="#">Português (Brasil)</a>
+        <span>+</span>
+   </div>
+   <hr>
+   <div class = "link">
+        <a href="#">Зарегистрироваться</a>
+        <a href="#">Вход</a>
+        <a href="#">Messenger</a>
+        <a href="#">Facebook</a>
+        <a href="#">Lite</a>
+        <a href="#">Видео</a>
+        <a href="#">Meta Pay</a>
+        <a href="#">Магазин Meta</a>
+        <a href="#">QuestRay-Ban</a>
+        <a href="#">Meta AI</a>
+        <a href="#">Больше контента от Meta</a>
+        <a href="#">Instagram</a>
+        <a href="#">Threads</a>
+        <a href="#">Центр информации о выборах</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Центр конфиденциальности</a>
+        <a href="#">Информация</a>
+        <a href="#">Создать рекламу</a>
+        <a href="#">Разработчикам</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Файлы cookie</a>
+        <a href="#">Рекламные предпочтения</a>
+        <a href="#">Условия использования</a>
+        <a href="#">Справка</a>
+        <a href="#">Загрузка контактов и лица, не являющиеся пользователями</a>
+        <a href="#">Настройки</a>
+        <a href="#">Рекламные предпочтения</a>
+        <a href="#">Журнал действий</a>
+   </div>
+   
+   
+   <p class = "meta">Meta © 2026</p>
+</footer>
 
 </body>
+
 </html>
