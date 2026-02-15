@@ -1,0 +1,37 @@
+<nav>
+  <a routerLink="/">Home</a> |
+  <a routerLink="/user">User</a>
+</nav>
+
+<hr>
+
+<h2>Profile Form</h2>
+
+<p>Name: {{ profileForm.value.name }}</p>
+<p>Email: {{ profileForm.value.email }}</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
+
+  <label>
+    Name
+    <input type="text" formControlName="name" />
+  </label>
+
+  <br><br>
+
+  <label>
+    Email
+    <input type="email" formControlName="email" />
+  </label>
+
+  <br><br>
+
+  <button type="submit" [disabled]="!profileForm.valid">
+    Submit
+  </button>
+
+</form>
+
+<hr>
+
+<router-outlet></router-outlet>
