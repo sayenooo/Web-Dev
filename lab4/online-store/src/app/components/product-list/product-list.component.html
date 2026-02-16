@@ -1,0 +1,13 @@
+<section class="page">
+  <header class="header">
+    <h1>Online Store</h1>
+    <p>Catalog of products (at least 10). Each card opens the real Kaspi product page in a new tab.</p>
+  </header>
+
+  <div class="grid">
+    <app-product-card
+      *ngFor="let p of products"
+      [product]="p"
+    ></app-product-card>
+  </div>
+</section>

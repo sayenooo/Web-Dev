@@ -1,0 +1,50 @@
+<article class="card">
+  <div class="media">
+    <img class="main-img" [src]="activeImage" [alt]="product.name" />
+
+    <!-- Bonus gallery (min 3 images) -->
+    <div class="thumbs" *ngIf="product.images?.length >= 3">
+      <button
+        class="thumb"
+        type="button"
+        *ngFor="let img of product.images"
+        (click)="setImage(img)"
+        [class.active]="img === activeImage"
+        aria-label="select image"
+      >
+        <img [src]="img" [alt]="product.name" />
+      </button>
+    </div>
+  </div>
+
+  <div class="body">
+    <h3 class="title">{{ product.name }}</h3>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ formatKzt(product.price) }}</div>
+
+      <div class="rating" title="Rating">
+        <span class="star" *ngFor="let filled of stars(product.rating)">
+          {{ filled ? '★' : '☆' }}
+        </span>
+        <span class="rating-num">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" type="button" (click)="openKaspi()">
+        Open on Kaspi
+      </button>
+
+      <div class="share">
+        <button class="btn ghost" type="button" (click)="shareWhatsApp()">
+          Share WhatsApp
+        </button>
+        <button class="btn ghost" type="button" (click)="shareTelegram()">
+          Share Telegram
+        </button>
+      </div>
+    </div>
+  </div>
+</article>
