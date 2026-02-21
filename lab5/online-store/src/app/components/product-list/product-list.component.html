@@ -1,0 +1,12 @@
+@if (products().length === 0) {
+  <p class="noProducts">No products in this category</p>
+} @else {
+  <div class="grid">
+    @for (p of products(); track p.id) {
+      <app-product-card
+        [product]="p"
+        (delete)="onDelete($event)">
+      </app-product-card>
+    }
+  </div>
+}

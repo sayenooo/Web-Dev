@@ -1,0 +1,44 @@
+<article class="card">
+  <div class="media">
+    <img class="main-img" [src]="product.imageUrl" [alt]="product.name" />
+  </div>
+
+  <div class="body">
+    <h3 class="title">{{ product.name }}</h3>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ formatKzt(product.price) }}</div>
+
+      <div class="rating" title="Rating">
+        <span class="star" *ngFor="let filled of stars(product.rating)">
+          {{ filled ? '★' : '☆' }}
+        </span>
+        <span class="rating-num">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" type="button" (click)="openKaspi()">
+        Open on Kaspi
+      </button>
+
+      <button class="btn" type="button" (click)="like()">
+        ❤️ {{ product.likes }}
+      </button>
+
+      <button class="btn danger" type="button" (click)="requestDelete()">
+        🗑 Delete
+      </button>
+
+      <div class="share">
+        <button class="btn ghost" type="button" (click)="shareWhatsApp()">
+          Share WhatsApp
+        </button>
+        <button class="btn ghost" type="button" (click)="shareTelegram()">
+          Share Telegram
+        </button>
+      </div>
+    </div>
+  </div>
+</article>

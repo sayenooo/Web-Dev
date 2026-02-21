@@ -1,0 +1,28 @@
+<p>DEBUG allProducts: {{ allProducts.length }}</p>
+<p>DEBUG selectedCategoryId: {{ selectedCategoryId }}</p>
+<p>DEBUG filteredProducts: {{ filteredProducts.length }}</p>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Categories</h2>
+
+    @for (c of categories; track c.id) {
+      <button
+        [class.active]="c.id === selectedCategoryId"
+        (click)="selectCategory(c.id)">
+        {{ c.name }}
+      </button>
+    }
+  </aside>
+
+  <main>
+    @if (selectedCategoryId === null) {
+      <h3>Select a category</h3>
+    } @else {
+      <app-product-list
+        [products]="filteredProducts"
+        (deleteProduct)="handleDelete($event)">
+      </app-product-list>
+    }
+  </main>
+</div>
