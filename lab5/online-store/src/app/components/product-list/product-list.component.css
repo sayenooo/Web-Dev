@@ -9,6 +9,18 @@
   font-size: 28px;
 }
 
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0;
+}
+.toolbar button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
 .header p {
   margin: 0 0 18px;
   opacity: 0.8;

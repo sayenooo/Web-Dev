@@ -1,8 +1,14 @@
-@if (products().length === 0) {
+<div class="toolbar">
+  <button type="button" (click)="sortAsc()">Price ↑</button>
+  <button type="button" (click)="sortDesc()">Price ↓</button>
+  <button type="button" (click)="resetSort()">Reset</button>
+</div>
+
+@if (viewProducts().length === 0) {
   <p class="noProducts">No products in this category</p>
 } @else {
   <div class="grid">
-    @for (p of products(); track p.id) {
+    @for (p of viewProducts(); track p.id) {
       <app-product-card
         [product]="p"
         (delete)="onDelete($event)">
