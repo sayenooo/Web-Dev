@@ -1,0 +1,23 @@
+<h1>Album Detail</h1>
+
+<div *ngIf="isLoading" class="loading">Loading album...</div>
+
+<div *ngIf="!isLoading && album">
+  <div class="card">
+    <div><b>ID:</b> {{ album.id }}</div>
+    <div><b>UserID:</b> {{ album.userId }}</div>
+
+    <label class="label">
+      <span><b>Title:</b></span>
+      <input [(ngModel)]="editTitle" />
+    </label>
+
+    <div class="actions">
+      <button (click)="save()" [disabled]="isSaving">Save</button>
+      <button (click)="goToPhotos()">View Photos</button>
+      <button class="secondary" (click)="backToList()">Back</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && !album" class="empty">Album not found.</div>

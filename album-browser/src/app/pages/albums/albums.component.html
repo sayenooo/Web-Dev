@@ -1,0 +1,11 @@
+<h1>Albums</h1>
+
+<div *ngIf="isLoading">Loading albums...</div>
+<div *ngIf="!isLoading && errorMsg">{{ errorMsg }}</div>
+
+<ul *ngIf="!isLoading && !errorMsg">
+  <li *ngFor="let a of albums" (click)="openAlbum(a.id)" style="cursor:pointer; margin: 8px 0;">
+    <b>#{{ a.id }}</b> — {{ a.title }}
+    <button (click)="deleteAlbum(a.id, $event)" style="margin-left:12px;">Delete</button>
+  </li>
+</ul>

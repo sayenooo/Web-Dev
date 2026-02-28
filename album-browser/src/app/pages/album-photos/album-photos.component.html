@@ -1,0 +1,18 @@
+<h1>Album {{ albumId }} Photos</h1>
+
+<button class="secondary" (click)="back()">Back</button>
+
+<div *ngIf="isLoading" class="loading">Loading photos...</div>
+
+<div *ngIf="!isLoading">
+  <ng-container *ngIf="photos$ | async as photos">
+    <div *ngIf="photos.length === 0" class="empty">No photos.</div>
+
+    <div class="grid" *ngIf="photos.length > 0">
+      <div class="photo" *ngFor="let p of photos">
+        <img [src]="p.thumbnailUrl" [alt]="p.title" />
+        <div class="caption">{{ p.title }}</div>
+      </div>
+    </div>
+  </ng-container>
+</div>
